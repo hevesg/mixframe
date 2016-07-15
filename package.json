@@ -1,0 +1,29 @@
+{
+  "name": "mixframe",
+  "version": "0.0.0",
+  "description": "Mixat's wireframe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hevesg/mixframe.git"
+  },
+  "keywords": [
+    "wireframe",
+    "bootstrap"
+  ],
+  "author": "mixat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hevesg/mixframe/issues"
+  },
+  "homepage": "https://github.com/hevesg/mixframe#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "jquery": "^3.1.0"
+  }
+}
