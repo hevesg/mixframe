@@ -3,29 +3,201 @@
 <head>
   <meta charset="utf-8" />
   <title>Mikszáth Kálmán Líceum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $('#nav').load('includes/nav.html');
+      $('#footer').load('includes/footer.html');
+      $('#contact').load('includes/contact.html');
+      $('#publications').load('includes/publications.html');
+    });
+  </script>
+  <style>
+    .flag {
+      display: inline-block;
+      background-image: url('images/flags.png');
+      background-size: cover;
+      margin-bottom: -2px;
+      width: 21px;
+      height: 14px;
+    }
+    .flag.flag-fr {
+      background-position: -21px 0;
+    }
+    .flag.flag-en {
+      background-position: -42px 0;
+    }
+    .flag.flag-de {
+      background-position: -63px 0;
+    }
+  </style>
 </head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <h1>Mixát csontváz</h1>
-        <p>Mi, a Mikszáth Kálmán Líceum dolgozói azt szeretnénk, hogy a diákokkal és a szülőkkel együttműködve közös erkölcsi alapelveket vallva mindannyiunk megelégedésére végezzük munkánkat. Kiemelt szerepet szánunk az egyéni felelősségvállaláson, kötelességtudáson alapuló, céltudatos kompetenciafejlesztő oktató-nevelő munkának.</p>
-        <p>Célunk, hogy diákjaink a magyarság és európaiság értékeit közvetítő versenyképes tudást és emberi mintát kapjanak.</p>
-      </div>
-      <div class="col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Ez egy panel teszt</h3>
+<body style="margin-top:70px;">
+  <div id="nav"></div>
+  <header>
+    <div class="container">
+      <div class="row lead">
+        <div class="col-sm-5 col-md-7 col-lg-6 hidden-xs">
+          <p>Mikszáth Kálmán Gimnázium</p>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-4">
+          <div class="row">
+            <div class="col-xs-5 col-sm-12 col-lg-5">
+              <p>Rákóczi utca 1<br />Pásztó, 3060</p>
+            </div>
+            <div class="col-xs-7 col-sm-12 col-lg-7">
+              <p>
+                <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:mikszath@mixat.hu">mikszath@mixat.hu</a><br />
+                <span class="glyphicon glyphicon-earphone"></span> <a href="tel:+3532460791">(+36) 32/460-791</a>
+              </p>
+            </div>
           </div>
-          <div class="panel-body">
-            <p>Itt van egy rövid leírás tesztnek.</p>
-          </div>
+        </div>
+        <div class="col-sm-3 col-md-2 col-lg-2">
+          <div class="addthis_horizontal_follow_toolbox pull-right"></div>
         </div>
       </div>
     </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="alert alert-info">Itt vannak a kiemelt hírek</p>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="images/no-image.jpg" alt="No image">
+              <div class="carousel-caption">
+                <h3>Ez itt egy fontos hír</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius eget magna ut volutpat. Curabitur condimentum vel metus et tristique. Maecenas sed.</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/no-image.jpg" alt="No image">
+              <div class="carousel-caption">
+                <h3>Ez meg egy másik fontos hír</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius eget magna ut volutpat. Curabitur condimentum vel metus et tristique. Maecenas sed.</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/no-image.jpg" alt="No image">
+              <div class="carousel-caption">
+                <h3>Ez meg egy harmadik</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius eget magna ut volutpat. Curabitur condimentum vel metus et tristique. Maecenas sed.</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <hr />
+        <p class="alert alert-info">Itt van a hírfolyam a 20 legfrissebb hírrel. A cikkek alatt opcionálisan megjelenik a publikálás dátuma és írója. A kiemelt hírek nagyban jelennek meg.</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <div>
+              <p><a href="#" class="thumbnail"><img src="http://mixat.hu/images/01.jpg" class="img-responsive" /></a></p>
+              <h3><a href="#">Egy hét Osterburkenben</a></h3>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><a href="#">Szabó Mária</a></p>
+                </div>
+                <div class="col-xs-6">
+                  <p class="text-muted text-right">január 26. csütörtök</p>
+                </div>
+              </div>
+              <p>Az iskoláink között majd 20 éve meglévő cserekapcsolat jóvoltából 13 diák és 2 kísérőtanár látogathatott a baden-württembergi Osterburkenbe.</p>
+            </div>
+            <div>
+              <h3><a href="#">Fény és árnyék történelmünk lapjain</a></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>Együttműködés gimnáziumok között pályázatnak köszönhetően a 2015/2016-os tanévben a pásztói Mikszáth Kálmán Líceum partneriskolai kapcsolatot létesített a székelyudvarhelyi Baczkamadarasi Kis Gergely Református Kollégium intézményével.</p>
+            </div>
+            <div class="lead">
+              <h3><a href="#">Londonban jártunk</a> <span class="label label-default">Tudástár</span></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>EA Mikszáth Kálmán Líceum angol nyelvi munkaközössége tanulmányi kirándulást szervezett Londonba.</p>
+            </div>
+            <div>
+              <h3><a href="#">Nádi Zoltán tanár úr miniszteri kitüntetése</a></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>Nádi Zoltán kémia-fizika szakos kollégánk a Megyeháza dísztermében miniszteri kitüntetést vett át Pölöskei Gáborné elnök asszonytól.</p>
+            </div>
+            <div>
+              <p><a href="#" class="thumbnail"><img src="http://paszto.xyz/mixat/2016/erettsegi/13f.jpg" class="img-responsive" /></a></p>
+              <h3><a href="#">Érettek</a></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>Nádi Zoltán kémia-fizika szakos kollégánk a Megyeháza dísztermében miniszteri kitüntetést vett át Pölöskei Gáborné elnök asszonytól.</p>
+            </div>
+            <div>
+              <h3><a href="#">Bata Gergely sikere az OKTV-n</a></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>Május hónapban lezajlottak a verseny döntői, ahol 27 tantárgy 38 kategóriájában 1065 tanuló küzdött 220 iskola nevében.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="lead">
+              <h3><a href="#">Nádi Zoltán tanár úr miniszteri kitüntetése</a></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>Nádi Zoltán kémia-fizika szakos kollégánk a Megyeháza dísztermében miniszteri kitüntetést vett át Pölöskei Gáborné elnök asszonytól.</p>
+            </div>
+            <div>
+              <p><a href="#" class="thumbnail"><img src="http://paszto.xyz/mixat/2016/erettsegi/13f.jpg" class="img-responsive" /></a></p>
+              <h3><a href="#">Érettek</a> <span class="label label-default">Videó</span></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>Nádi Zoltán kémia-fizika szakos kollégánk a Megyeháza dísztermében miniszteri kitüntetést vett át Pölöskei Gáborné elnök asszonytól.</p>
+            </div>
+            <div>
+              <h3><a href="#">Bata Gergely sikere az OKTV-n</a></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>Május hónapban lezajlottak a verseny döntői, ahol 27 tantárgy 38 kategóriájában 1065 tanuló küzdött 220 iskola nevében.</p>
+            </div>
+            <div>
+              <p><a href="#" class="thumbnail"><img src="http://mixat.hu/images/01.jpg" class="img-responsive" /></a></p>
+              <h3><a href="#">Egy hét Osterburkenben</a></h3>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><a href="#">Szabó Mária</a></p>
+                </div>
+                <div class="col-xs-6">
+                  <p class="text-muted text-right">január 26. csütörtök</p>
+                </div>
+              </div>
+              <p>Az iskoláink között majd 20 éve meglévő cserekapcsolat jóvoltából 13 diák és 2 kísérőtanár látogathatott a baden-württembergi Osterburkenbe.</p>
+            </div>
+            <div>
+              <h3><a href="#">Fény és árnyék történelmünk lapjain</a></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>Együttműködés gimnáziumok között pályázatnak köszönhetően a 2015/2016-os tanévben a pásztói Mikszáth Kálmán Líceum partneriskolai kapcsolatot létesített a székelyudvarhelyi Baczkamadarasi Kis Gergely Református Kollégium intézményével.</p>
+            </div>
+            <div>
+              <h3><a href="#">Londonban jártunk</a></h3>
+              <p class="text-muted">január 26. csütörtök</p>
+              <p>EA Mikszáth Kálmán Líceum angol nyelvi munkaközössége tanulmányi kirándulást szervezett Londonba.</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-center"><button type="button" class="btn btn-link">További cikkek</button></p>
+        <hr />
+      </div>
+      <div class="col-md-4">
+        <!--<div id="contact"></div>-->
+        <div id="publications"></div>
+        <p class="alert alert-warning">Itt van egy nagy üres rész, ahova még lehetne valamiket tenni.</p>
+      </div>
+    </div>
   </div>
+  <div id="footer">
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56a7e66d55023216"></script>
 </body>
 </html>
